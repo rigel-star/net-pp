@@ -1,4 +1,5 @@
 #include "../include/interf.hpp"
+#include "../include/ipv4.hpp"
 
 #include <stdint.h>
 #include <iostream>
@@ -25,5 +26,8 @@ int main(void) {
 
     uint8_t data[STD_ETHER_MTU_SIZE] = {0x41, 0x42, 0x43};
     interf.send(data);
+
+    IPV4 h1ip((uint8_t) 300, (uint8_t) 168, (uint8_t) 1, (uint8_t) 1);
+    std::cout << h1ip.tostring() << std::endl;
     return 0;
 }

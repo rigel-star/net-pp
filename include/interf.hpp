@@ -27,6 +27,10 @@ class Interf {
     uint32_t mtu;
     string name;
 
+    Interf() {
+
+    }
+
     Interf(
         uint8_t mac[6], 
         uint8_t ip[4], 
